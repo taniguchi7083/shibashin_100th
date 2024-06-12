@@ -1,0 +1,59 @@
+/* スクロールダウンボタン
+	----------------------------------------------------------------- */
+.el_scrollDown {
+	position: absolute;
+	top: 360rem;
+	right: 38rem;
+
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	font-size: 14rem;
+	font-weight: 700;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+/* 線の描写 */
+.el_scrollDown:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 8rem;
+	width: 2px;
+	height: 32rem;
+	background: #000;
+	animation:
+		circlemove 1.6s ease-in-out infinite,
+		cirlemovehide 1.6s ease-out infinite;
+}
+
+@keyframes circlemove {
+	0% {
+		transform: translateY(40rem);
+	}
+
+	100% {
+		transform: translateY(58rem);
+	}
+}
+
+@keyframes cirlemovehide {
+	0% {
+		opacity: 0
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

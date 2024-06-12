@@ -1,0 +1,61 @@
+/* font
+// ----------------------------------------------------------------- */
+:root {
+  --font-jp: 'Noto Sans JP', sans-serif;
+  --font-en: 'Montserrat', sans-serif;
+}
+
+.hp_en {
+  font-family: var(--font-en) !important;
+}
+
+/* カスタムプロパティ
+// ----------------------------------------------------------------- */
+:root {
+  // カラー
+  --color-white: #FFFFFF;
+  --color-black: #4B524F;
+  --color_primary: #009E41;
+  --color-base: #FDFDFD;
+  --color-lineGray: #CCCCCC;
+  --color-lightGray: #E7F1F7;
+  --color-new: #d16c78;
+  --color-red: #E597A0;
+  --color-blue: #007BFF;
+  --color-gradient: linear-gradient(to right, #CACCD1, #FFFFFF, #CACCD1);
+  --color-gradient-about: linear-gradient(to right, #00E064, #009944);
+  --color-gradient-primary: linear-gradient(to bottom, rgba(0, 158, 65, 0.4), rgba(0, 158, 65, 0) 80%);
+
+  // z-index
+  --z-index-loading: 600;
+  --z-index-modal: 500;
+  --z-index-overlay: 400;
+  // --z-index-spmenu: 300;
+  --z-index-nav: 100;
+  --z-index-header: 200;
+  --z-index-spmenu-modal: 99;
+}
+
+/* 画面サイズ
+// ----------------------------------------------------------------- */
+// :root {
+//   --breakPoint-pc: 1600;
+//   --breakPoint-sp: 768;
+
+//   --font-size: min(calc(100vw * 1 / var(--breakPoint-pc)), 8.125%);
+
+//   @media (max-width: 768px) {
+//     --font-size: min(calc(100vw * 1 / var(--breakPoint-sp)), 8.125%);
+//   }
+// }
+
+:root {
+  --breakPoint-pc: 1600;
+  --breakPoint-sp: 768;
+
+  --font-size: min(calc(100vw * 1 / var(--breakPoint-pc)));
+
+  @media (max-width: 768px) {
+    --font-size: min(calc(100vw * 1 / var(--breakPoint-sp)));
+  }
+}

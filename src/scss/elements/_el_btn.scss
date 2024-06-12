@@ -1,0 +1,174 @@
+// ==========================================================================
+// btn
+// ==========================================================================
+
+
+
+.el_btn {
+	--button-text: var(--color_primary);
+	--button-background: #fff;
+	--button-hover-text: #fff;
+	--button-hover-background: #fff;
+
+	// --icon-text: #fff;
+	// --icon-background: var(--color_primary);
+	// --icon-hover-text: var(--color_primary);
+	// --icon-hover-background: #fff;
+}
+
+
+// el_btn
+// ----------------------------------------------------------------- */
+.el_btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 240rem;
+	height: 60rem;
+	background: var(--button-background);
+	color: var(--button-text);
+	transition: all 0.3s ease-out;
+	border-radius: 9in;
+	padding-inline: 32rem 21rem;
+	cursor: pointer;
+
+	@media (max-width: 768px) {
+		width: 352rem;
+		height: 80rem;
+		padding-inline: 32rem 27rem;
+	}
+
+	&>span {
+		font-size: 16rem;
+		letter-spacing: 0.08em;
+		font-weight: 700;
+		position: relative;
+		z-index: 1;
+
+		@media (max-width: 768px) {
+			font-size: 28rem;
+		}
+	}
+
+	&::after {
+		content: "";
+		background: var(--color_primary);
+		width: 32rem;
+		height: 32rem;
+		position: absolute;
+		right: 0;
+		transform: translateX(-12rem);
+		transition: width 0.6s cubic-bezier(0.75, 0, 0.25, 1),
+			height 0.6s cubic-bezier(0.75, 0, 0.25, 1),
+			transform 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+		border-radius: 9in;
+
+		@media (max-width: 768px) {
+			width: 56rem;
+			height: 56rem;
+		}
+	}
+
+	.el_arrow {
+		position: relative;
+		z-index: 1;
+		width: 12.89rem;
+		height: 14.17rem;
+
+		@media (max-width: 768px) {
+			width: 24.19rem;
+			height: 26.59rem;
+		}
+	}
+}
+
+// ホバー
+// ----------------------------------------------------------------- */
+.el_btn {
+	@media (hover: hover) {
+		&:hover::after {
+			width: 100%;
+			height: 100%;
+			transform: translateX(0);
+		}
+
+		&:is(:hover) {
+			color: var(--button-hover-text);
+			background: var(--button-hover-background);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .el_btn {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	width: vw(200);
+// 	max-width: 100%;
+// 	padding: vw(10) vw(10);
+// 	font-size: vw(16);
+// 	text-align: center;
+// 	color: #348c50;
+// 	border: 1px solid #348c50;
+// 	border-radius: 9999px;
+// }
+
+// .el_btn:hover {
+// 	color: #fff;
+// 	background: #348c50;
+// }
+
+// // ------------------------------------------------------
+// // mail
+// // ------------------------------------------------------
+// .el_btn.el_btn__mail {
+// 	background: #fff;
+// }
+
+// .el_btn.el_btn__mail:before {
+// 	display: inline-block;
+// 	content: "";
+// 	background-image: url(/assets/img/icon_email.png);
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	width: vw(16);
+// 	height: vw(12);
+// 	margin-right: vw(8);
+// }
+
+// .el_btn.el_btn__mail:hover {
+// 	background: linear-gradient(45deg, rgb(57, 154, 197) 0%, rgb(52, 140, 80) 100%) border-box border-box;
+// }
+
+// .el_btn.el_btn__mail:hover:before {
+// 	background-image: url(/assets/img/icon_email_on.png);
+// }
+
+// .bl_footerChildNav_item>.el_btn.el_btn__mail {
+// 	width: 100%;
+// 	margin-top: vw(64);
+// }

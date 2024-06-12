@@ -1,0 +1,782 @@
+// メインビジュアル
+// ================================================ */
+.pg_home {
+	.un_MV {
+
+		&_inner {
+			margin-left: 240rem;
+
+			@media (max-width: 768px) {
+				margin-left: 0;
+				margin-inline: 32rem;
+			}
+		}
+
+		// コンテナ
+		&_cont {
+			position: relative;
+			width: 100%;
+			height: 100svh;
+			min-height: 640rem;
+			padding-top: 80rem;
+			display: flex;
+			align-items: center;
+
+			@media (max-width: 768px) {
+				padding-top: 104rem;
+				min-height: 1200rem;
+			}
+		}
+
+		// キャッチコピー Unit
+		&_copyUnit {
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			gap: 60rem;
+
+			@media (max-width: 768px) {
+				align-items: start;
+				flex-direction: column;
+				gap: 40rem;
+			}
+
+			&_figure {
+				width: 240rem;
+				height: auto;
+
+				@media (max-width: 768px) {
+					width: 360rem;
+				}
+			}
+
+			&_ttl {
+				font-size: 56rem;
+				line-height: 1.3;
+				font-weight: 700;
+				letter-spacing: 0;
+
+				@media (max-width: 768px) {
+					font-size: 68rem;
+				}
+			}
+		}
+
+		// テキストボックス
+		&_textUnit {
+			display: flex;
+			align-items: flex-end;
+			gap: 260rem;
+		}
+
+		&_text {
+			margin-top: 106rem;
+
+			@media (max-width: 768px) {
+				margin-top: 80rem;
+			}
+
+			&>p {
+				font-size: 16rem;
+				font-weight: 700;
+
+				@media (max-width: 768px) {
+					font-size: 24rem;
+				}
+
+				&:last-child {
+					margin-top: 54rem;
+
+					@media (max-width: 768px) {
+						margin-top: 40rem;
+					}
+				}
+			}
+		}
+
+		// カウントダウン
+		&_count {
+			width: 240rem;
+			height: 240rem;
+			background: #fff;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 16rem;
+
+			@media (max-width: 768px) {
+				position: absolute;
+				top: 40rem;
+				right: 0;
+				width: 280rem;
+				height: 280rem;
+			}
+
+			&_subTtl {
+				font-size: 20rem;
+
+				@media (max-width: 768px) {
+					font-size: 28rem;
+				}
+			}
+
+			&_ttl {
+				font-size: 20rem;
+
+				@media (max-width: 768px) {
+					font-size: 28rem;
+				}
+
+				&>span {
+					font-size: 48rem;
+					font-weight: 700;
+
+					@media (max-width: 768px) {
+						font-size: 56rem;
+					}
+				}
+			}
+		}
+
+		// 説明文
+		&_txtArea {
+			position: relative;
+			padding-bottom: 280rem;
+
+			@media (max-width: 768px) {
+				padding-bottom: 1120rem;
+				margin-bottom: 80rem;
+			}
+
+			&_txt {
+				margin-top: 72rem;
+
+				@media (max-width: 768px) {
+					margin-top: 80rem;
+				}
+
+				&>p {
+					font-size: 24rem;
+
+					@media (max-width: 768px) {
+						font-size: 32rem;
+					}
+				}
+
+				.hp_en {
+					font-weight: 700;
+				}
+
+				&>*+* {
+					margin-top: 44rem;
+				}
+			}
+
+			&_figure {
+				position: absolute;
+
+				&:before {
+					content: "";
+					position: absolute;
+					background: var(--color-gradient-primary);
+					z-index: -1;
+					border-radius: 24rem;
+				}
+
+				&>img {
+					border-radius: 24rem;
+					overflow: hidden;
+				}
+
+				&__01 {
+					width: 540rem;
+					height: 360rem;
+					top: 0;
+					right: 0;
+
+					@media (max-width: 768px) {
+						top: 1200rem;
+						right: -32rem;
+					}
+
+					&>img {
+						border-radius: 24rem 0 0 24rem;
+					}
+
+					&:before {
+						width: 540rem;
+						height: 360rem;
+						left: -40rem;
+						bottom: -40rem;
+					}
+				}
+
+				&__02 {
+					width: 360rem;
+					height: 240rem;
+					top: 400rem;
+					right: 400rem;
+
+					@media (max-width: 768px) {
+						top: 1590rem;
+						left: -32rem;
+					}
+
+					&:before {
+						width: 360rem;
+						height: 240rem;
+						right: -40rem;
+						bottom: -40rem;
+					}
+				}
+
+				&__03 {
+					width: 240rem;
+					height: 160rem;
+					top: 680rem;
+					right: 240rem;
+
+					@media (max-width: 768px) {
+						top: auto;
+						bottom: 0;
+						right: 228rem;
+					}
+
+					&:before {
+						width: 240rem;
+						height: 160rem;
+						left: -40rem;
+						bottom: -40rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// un_loopSlider
+// ================================================ */
+.pg_home {
+	.un_loopSlider {
+
+		// スクロール文字
+		&_font {
+			display: flex;
+			overflow: hidden;
+			white-space: nowrap;
+			gap: 80rem;
+
+			span {
+				animation: flowing 80s linear infinite;
+				color: #F5F5F5;
+				font-size: 240rem;
+				letter-spacing: 0;
+				font-weight: 600;
+			}
+		}
+
+		// スクロール画像
+		&_images {
+			display: flex;
+			overflow: hidden;
+			margin-top: -32rem;
+
+			&_inner {
+				display: flex;
+				animation: flowingReverse 80s linear infinite;
+			}
+
+			&_figure {
+				width: 240rem;
+				height: 160rem;
+				flex: 0 0 auto;
+				border-radius: 24rem;
+				overflow: hidden;
+				margin-right: 16rem;
+			}
+		}
+	}
+
+	@keyframes flowing {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes flowingReverse {
+		0% {
+			transform: translateX(-100%);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
+	}
+}
+
+// un_message
+// ================================================ */
+.pg_home {
+	.un_message {
+		padding-block: 156rem;
+
+		@media (max-width: 768px) {
+			padding-block: 112rem;
+		}
+
+		.ly_cont {
+			display: grid;
+			grid-template-columns: 1fr 360rem;
+			gap: 80rem;
+
+			@media (max-width: 768px) {
+				grid-template-columns: 1fr;
+				gap: 80rem;
+			}
+		}
+
+		&_txtArea>.el_btn {
+			margin-top: 40rem;
+		}
+
+		.el_comnHeading {
+			margin-bottom: 0;
+		}
+
+		&_text {
+			margin-top: 48rem;
+		}
+
+		&_figure {
+			position: relative;
+
+			@media (max-width: 768px) {
+				width: 560rem;
+				height: auto;
+				margin-inline: auto;
+			}
+
+			&>img {
+				border-radius: 24rem;
+				overflow: hidden;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				background: var(--color-gradient-primary);
+				z-index: -1;
+				border-radius: 24rem;
+
+				width: 360rem;
+				height: 360rem;
+				right: -40rem;
+				bottom: -40rem;
+
+				@media (max-width: 768px) {
+					width: 560rem;
+					height: 560rem;
+				}
+			}
+		}
+	}
+}
+
+// un_about
+// ================================================ */
+.pg_home {
+	.un_about {
+		padding-block: 114rem;
+		background-image: var(--color-gradient-about);
+
+		@media (max-width: 768px) {
+			padding-block: 112rem;
+		}
+
+		// タイトル
+		&_ttl {
+			font-size: 120rem;
+			line-height: 0.8;
+			color: #fff;
+			position: relative;
+			display: inline-block;
+			font-weight: 600;
+
+			span {
+				font-size: 24rem;
+				position: absolute;
+				top: 36rem;
+				right: 64rem;
+			}
+		}
+
+		// レイアウト
+		&Conts {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 80rem;
+			margin-top: 80rem;
+
+			@media (max-width: 768px) {
+				grid-template-columns: 1fr;
+				margin-inline: auto;
+			}
+		}
+
+		// リスト
+		// &_list {
+		// 	&_item {
+		// 		display: flex;
+		// 		align-items: center;
+		// 		justify-content: space-between;
+		// 		padding: 32rem 0 32rem 16rem;
+		// 		border-bottom: 1px solid #ffffff5e;
+
+		// 		@media (max-width: 768px) {
+		// 			padding: 40rem 0 40rem 24rem;
+		// 		}
+		// 	}
+
+		// 	&_link {
+		// 		font-size: 24rem;
+		// 		color: #fff;
+
+		// 		@media (max-width: 768px) {
+		// 			font-size: 32rem;
+		// 		}
+
+		// 		&:before {
+		// 			display: block;
+		// 			content: attr(data-word);
+		// 			font-size: 16rem;
+		// 			font-weight: bold;
+		// 			font-family: var(--font-en);
+		// 			margin-bottom: 8rem;
+
+		// 			@media (max-width: 768px) {
+		// 				font-size: 24rem;
+		// 			}
+		// 		}
+		// 	}
+
+		// 	&_arrow {
+		// 		width: 30rem;
+		// 		height: 30rem;
+		// 		background: #fff;
+		// 		border-radius: 50%;
+		// 		display: flex;
+		// 		align-items: center;
+		// 		justify-content: center;
+
+		// 		@media (max-width: 768px) {
+		// 			width: 56rem;
+		// 			height: 56rem;
+		// 		}
+
+		// 		.el_arrow {
+		// 			width: 12.89rem;
+		// 			height: 14.17rem;
+
+		// 			@media (max-width: 768px) {
+		// 				width: 24.19rem;
+		// 				height: 26.59rem;
+		// 			}
+
+		// 			.el_arrow_a {
+		// 				fill: var(--color_primary) !important;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+
+	// swiper
+	.bl_swiper {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 520rem;
+		padding: 56rem 0;
+		border-radius: 24rem;
+		border: 1px solid #fff;
+		position: relative;
+
+		@media (max-width: 768px) {
+			margin-inline: auto;
+			width: 620rem;
+			padding: 80rem 0;
+		}
+
+		&_ttl {
+			font-size: 24rem;
+			color: var(--color_primary);
+			background: #fff;
+			padding: 12rem 32rem;
+			border-radius: 9in;
+			position: absolute;
+			top: -26rem;
+
+			@media (max-width: 768px) {
+				font-size: 32rem;
+				padding: 20rem 40rem;
+				top: -38rem;
+			}
+
+			&>span {
+				font-weight: 700;
+			}
+		}
+
+		.el_btn {
+			margin-top: 40rem;
+		}
+	}
+
+	.swiper {
+		&_wrap {
+			position: relative;
+			width: 360rem;
+
+			@media (max-width: 768px) {
+				width: 470rem;
+			}
+		}
+
+		&__images {
+			border-radius: 24rem;
+		}
+
+		&-slide {
+			p {
+				font-size: 24rem;
+			}
+		}
+
+		&__text {
+			.swiper-slide {
+				font-size: 18rem;
+				line-height: 1.2;
+				color: #fff;
+				margin-top: 28rem;
+
+				@media (max-width: 768px) {
+					font-size: 24rem;
+				}
+
+			}
+		}
+
+		// 前への矢印
+		&-button-prev {
+			left: -94rem !important;
+		}
+
+		// 次への矢印
+		&-button-next {
+			right: -94rem !important;
+		}
+
+		// 画像変更
+		&-button-prev,
+		&-button-next {
+			outline: none;
+			width: 29.18rem !important;
+			height: 32.08rem !important;
+
+			@media (max-width: 768px) {
+				width: 39.18rem !important;
+				height: 42.08rem !important;
+			}
+
+			// デフォルトボタン消去
+			&::after {
+				display: none !important;
+			}
+
+			// svgスタイル
+			&::before {
+				content: "";
+				width: 60rem;
+				height: 60rem;
+				background: #fff;
+				position: absolute;
+				z-index: -1;
+				border-radius: 50%;
+
+				@media (max-width: 768px) {
+					width: 80rem;
+					height: 80rem;
+				}
+			}
+
+			// svgカラー
+			.el_arrow_a {
+				fill: var(--color_primary) !important;
+			}
+		}
+	}
+}
+
+// un_voice
+// ================================================ */
+.pg_home {
+	.un_voice {
+		padding-block: 156rem;
+
+		@media (max-width: 768px) {
+			padding-block: 112rem;
+		}
+
+		&_ttl {
+			font-size: 120rem;
+			line-height: 0.8;
+			color: var(--color_primary);
+			text-align: center;
+			font-weight: 600;
+		}
+	}
+}
+
+.bl_grid {
+	&Conts {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 160rem;
+		margin-top: 56rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			flex-direction: column;
+			gap: 80rem;
+		}
+	}
+
+	&_item {
+		@media (max-width: 768px) {
+			width: 600rem;
+			margin-inline: auto;
+		}
+
+		&_figure {
+			&>img {
+				border-radius: 24rem;
+				overflow: hidden;
+			}
+		}
+
+		&_ttl {
+			font-size: 32rem;
+			margin-top: 48rem;
+			font-weight: 600;
+
+			@media (max-width: 768px) {
+				font-size: 40rem;
+				margin-top: 40rem;
+			}
+		}
+
+		&_txt {
+			margin-top: 48rem;
+
+			@media (max-width: 768px) {
+				margin-top: 40rem;
+			}
+		}
+
+		&_figure {
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				background: var(--color-gradient-primary);
+				z-index: -1;
+				border-radius: 24rem;
+			}
+
+			&__left:before {
+				width: 480rem;
+				height: 320rem;
+				right: -40rem;
+				bottom: -40rem;
+
+				@media (max-width: 768px) {
+					width: 600rem;
+					height: 100%;
+				}
+			}
+
+			&__right:before {
+				width: 480rem;
+				height: 320rem;
+				left: -40rem;
+				bottom: -40rem;
+
+				@media (max-width: 768px) {
+					width: 600rem;
+					height: 100%;
+				}
+			}
+		}
+
+		&>.el_btn {
+			margin-top: 32rem;
+		}
+	}
+}
+
+// un_other
+// ================================================ */
+.un_other {
+	padding-block: 40rem;
+	background-image: var(--color-gradient-about);
+
+	@media (max-width: 768px) {
+		padding-block: 80rem;
+	}
+
+	&_inner {
+		display: flex;
+		justify-content: center;
+		justify-content: space-between;
+		width: 640rem;
+		margin-inline: auto;
+
+		@media (max-width: 768px) {
+			width: auto;
+			margin-inline: 32rem;
+		}
+	}
+
+	&_figure {
+		width: 240rem;
+		height: auto;
+		border-radius: 24rem;
+		overflow: hidden;
+
+		@media (max-width: 768px) {
+			width: 280rem;
+		}
+	}
+
+	&_ttl {
+		font-size: 32rem;
+		color: #fff;
+		line-height: 1.5;
+		font-weight: 600;
+
+		@media (max-width: 768px) {
+			font-size: 36rem;
+		}
+	}
+
+	& .el_btn {
+		margin-top: 32rem;
+	}
+}

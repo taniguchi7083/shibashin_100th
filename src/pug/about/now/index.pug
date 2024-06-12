@@ -1,0 +1,129 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['now'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_sec pg_now'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src=path+"js/particles.min.js")
+
+block bodyClass
+block content
+	main.l-main
+		#particles-js
+		//- -------------------------------------------------------------------
+		//- now
+		//- -------------------------------------------------------------------
+		.un_now
+			.ly_cont
+				.un_now_inner
+					h1.el_comnHeading(data-word="JUST NOW")
+						|しばしんの今
+					h2.un_now_subTtl
+						|100周年スローガンと
+						br.hp_spOnly
+						|記念ロゴマークについて
+					p
+						|創立100周年を記念して、しばしんではスローガンと記念ロゴマークを作成しました。
+						br
+						|それぞれに込められた職員の想いをご紹介します。
+
+				//- -------------------------------------------------------------------
+				//- SLOGAN
+				//- -------------------------------------------------------------------
+				section.un_now_slogan
+					h2.un_now_heading
+						|SLOGAN
+					h3.un_now_slogan_ttl
+						|地域とともに100周年
+						br
+						|『感謝』と『未来』をカタチに
+					p.un_now_slogan_subTtl
+						|スローガンに込められた想い
+					p.un_now_slogan_txt
+						|これまで芝信用金庫をご支援いただいたお客さまや、成長を支えていただいた地域の皆さま、
+						br.hp_pcOnly
+						|そして当金庫発展に尽力した全ての職員に感謝を示すこと。その上で、
+						br.hp_pcOnly
+						|これからも地域に密着した最上位の金融機関＝「ＴＨＥ コミュニティバンク」として選ばれる存在を目指して、
+						br.hp_pcOnly
+						|「お客さまの幸せ」・「地域の繁栄」・「職員のやりがい・働きがい」を実現していきたいという
+						br.hp_pcOnly
+						|想いを込めてスローガンを作成しました。
+
+				//- -------------------------------------------------------------------
+				//- LOGOTYPE
+				//- -------------------------------------------------------------------
+				section.un_now_logotype
+					h2.un_now_heading
+						|LOGOTYPE
+					.un_now_logotype_inner
+						.un_now_logotype_figure
+							img(src=img_path+"/about/now/svg_MV_100th_02.svg", alt="")
+						.un_now_logotype_txtConts
+							h3.un_now_logotype_ttl
+								|ロゴマークに込めた想い
+							p.un_now_logotype_txt
+								|金庫職員へロゴマークのアイディアを募集し、50点を超える応募の中から投票により本ロゴマークが選ばれました。Anniversaryは船の帆をイメージし、これまで様々な波を乗り越えてきた芝信用金庫が、これからも船のようにどこまでも続く大海原を突き進んで行ってほしい。そんな気持ちをデザインに込めました。
+								br
+								|「地域とともに100周年『感謝』と『未来』をカタチに」のスローガンとともに、皆さまに愛されるロゴマークになれば幸いです。
+
+				//- -------------------------------------------------------------------
+				//- しばしん100周年記念事業一覧
+				//- -------------------------------------------------------------------
+				section.un_now_list#section_now
+					h2.un_now_list_ttl
+						|しばしん
+						span.hp_en 100
+						|周年記念事業一覧
+
+					.bl_gridConts
+						.bl_grid_item.js_fadein
+							.bl_grid_item_figure.bl_grid_item_figure__left
+								img(src=img_path+"/about/now/img_now_list_01.webp", alt="")
+							h3.bl_grid_item_ttl
+								|金融リテラシー（課外授業）
+							p.bl_grid_item_txt
+								|小学校６年生を対象に、「金融リテラシー向上のための課外授業」を開催しました。児童たちは、限られた予算でカレーに必要な材料を購入するグループワークを通じて、「何かを得るには別の何かをあきらめなければならない」という、経済の基礎観念であるトレードオフについて学びました。授業の最後には模擬紙幣を使用した札勘体験を行いました。児童たちは、職員によるお手本を見ながら初めての札勘に挑戦しました。
+						//- .bl_grid_item.js_fadein
+						//- 	.bl_grid_item_figure.bl_grid_item_figure__left
+						//- 		img(src=img_path+"/about/now/img_now_list_01.webp", alt="")
+						//- 	h3.bl_grid_item_ttl
+						//- 		|金融リテラシー（課外授業）
+						//- 	p.bl_grid_item_txt
+						//- 		|小学校６年生を対象に、「金融リテラシー向上のための課外授業」を開催しました。児童たちは、限られた予算でカレーに必要な材料を購入するグループワークを通じて、「何かを得るには別の何かをあきらめなければならない」という、経済の基礎観念であるトレードオフについて学びました。授業の最後には模擬紙幣を使用した札勘体験を行いました。児童たちは、職員によるお手本を見ながら初めての札勘に挑戦しました。
+
+				//- ページネーション
+				.bl_nextPage
+					a.bl_comnListChild_item(href=link_path+"about/history/")
+						.bl_comnList_arrow
+							+icon_arrow__reverse
+						.bl_comnListChild_link(data-word="HISTORY")
+							|しばしんの
+							br.hp_spOnly
+							|これまで
+					a.bl_comnListChild_item.hp_noHover(href=link_path+"")
+						.bl_comnListChild_link(data-word="FUTURE")
+							|しばしんの
+							br.hp_spOnly
+							|これから
+						.bl_comnList_arrow
+							+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+
+//- index.htmlにのみ必要なjsファイル
+block append script

@@ -1,0 +1,40 @@
+meta(charset="UTF-8")
+title #{page.title}
+if page.description
+	meta(name="description" content=page.description)
+meta(name="viewport" content="width=device-width, initial-scale=1")
+if page.og
+	if page.og.site_name
+		meta(property="og:site_name" content=page.og.site_name)
+	if page.og.title
+		meta(property="og:title" content=page.og.title)
+	if page.og.description
+		meta(property="og:description" content=page.og.description)
+	if page.og.url
+		meta(property="og:url" content=page.og.url)
+	if page.og.locale
+		meta(property="og:locale" content=page.og.locale)
+	if page.og.type
+		meta(property="og:type" content=page.og.type)
+meta(property="og:image" content=path+"/images/ogp.png")
+
+//- ファビコン
+//- ------------------------------------------------------------ */
+link(rel="apple-touch-icon" sizes="180x180" href=path+"/images/apple-touch-icon.png")
+link(rel="icon" type="image/png" sizes="32x32" href=path+"/images/favicon-32x32.png")
+link(rel="icon" type="image/png" sizes="16x16" href=path+"/images/favicon-16x16.png")
+
+//- フォント
+//- ------------------------------------------------------------ */
+link(rel="preconnect" href="https://fonts.googleapis.com")
+link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet")
+
+//- サイト共通のcssファイル
+//- ------------------------------------------------------------ */
+link(rel="stylesheet" href=path+"css/reset.css")
+link(rel="stylesheet" href=path+"css/style.css")
+
+//- サイト共通のjsファイル
+//- ------------------------------------------------------------ */
+script(src=path+"js/main.js", defer)

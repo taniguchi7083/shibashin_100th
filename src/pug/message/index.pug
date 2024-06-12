@@ -1,0 +1,80 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../include/_layout
+
+block config
+	include ../include/_config
+	- var page = pagelist['message'];
+	- var h1_setting = false;
+	- var path = '../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../';
+	- var bodyClass = 'pg_sec pg_message'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src=path+"js/particles.min.js")
+
+block bodyClass
+block content
+	main.l-main
+		#particles-js
+		//- -------------------------------------------------------------------
+		//- message
+		//- -------------------------------------------------------------------
+		section.un_message
+			.ly_cont
+				h1.el_comnHeading(data-word="MESSAGE")
+					|ごあいさつ
+				.un_message_figure.js_fadein
+					img(src=img_path+"/message/img_message.webp", alt="")
+				p.un_message_subTtl
+					|理事長
+					br
+					|望月 芳雄
+				.un_message_txtConts
+					p
+						|平素より、芝信用金庫に格別のご愛顧を賜り、厚く御礼申し上げます。
+						br
+						|当金庫は、1925年（大正14年）６月１日、産業組合法に基づく 有限責任芝信用組合として創立いたしました。
+					p
+						|港区芝の地に設立されたきっかけとなったのは、 1923年（大正12年）9月1日に関東地方を襲った関東大震災でした。
+						br
+						|私たちは震災からの復旧・復興を目的にスタートし、 相互扶助、共存共栄の精神を今日まで継承して参りました。
+						br
+						|そして、2025年（令和7年）6月1日、私どもは創立100周年を迎えます。
+					p
+						|「地域とともに100周年『感謝』と『未来』をカタチに」をスローガンに掲げ、「お客さま」、「地域」、そして、「職員」に対する「感謝」と「未来」をカタチにするため、金庫創立100周年記念事業に職員一人ひとりが参画し、地域社会に貢献したいと考えております。 
+						br
+						|迎える１年後の100周年に向け、またその先の100年を見据えて、地域に密着した金融機関＝「ＴＨＥ コミュニティバンク」としてお客さまに選ばれ、必要とされる存在であり続けられるよう、役職員一同、一層の努力を積み重ねて参ります。 
+					p
+						|今後とも、変わらぬご支援とご愛顧賜りますよう心よりお願い申し上げます。
+					p
+						|2024年（令和6年）6月
+
+				//- ページネーション
+				.bl_nextPage
+					a.bl_comnListChild_item(href=link_path+"")
+						.bl_comnList_arrow
+							+icon_arrow__reverse
+						.bl_comnListChild_link(data-word="HOME")
+							|周年
+							br.hp_spOnly
+							|サイトトップ
+					a.bl_comnListChild_item(href=link_path+"about/history/")
+						.bl_comnListChild_link(data-word="HISTORY")
+							|しばしんの
+							br.hp_spOnly
+							|これまで
+						.bl_comnList_arrow
+							+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+
+//- index.htmlにのみ必要なjsファイル
+block append script

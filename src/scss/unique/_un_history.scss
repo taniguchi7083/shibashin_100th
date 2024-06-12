@@ -1,0 +1,250 @@
+// タブメニュー
+// ================================================ */
+.bl_tab {
+	&_menu {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20rem;
+		border-bottom: 4rem solid var(--color_primary);
+
+		@media (max-width: 768px) {
+			gap: 8rem;
+		}
+
+
+		&_item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8rem;
+			height: 80rem;
+			font-size: 20rem;
+			font-weight: 700;
+			background: #fff;
+			color: var(--color_primary);
+			border-radius: 16rem 16rem 0 0;
+			cursor: pointer;
+			transition: all .3s;
+
+			@media (max-width: 768px) {
+				font-size: 20rem;
+				height: 120rem;
+				flex-direction: column;
+			}
+
+			&>span {
+				width: 40rem;
+				height: 40rem;
+				border-radius: 9in;
+				color: #fff;
+				background: var(--color_primary);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				@media (max-width: 768px) {
+					width: 48rem;
+					height: 48rem;
+				}
+			}
+		}
+	}
+
+	// モディファイア
+	&_menu__reverse {
+		&.bl_tab_menu {
+			border-top: 4rem solid var(--color_primary);
+			border-bottom: none;
+		}
+
+		.bl_tab_menu_item {
+			border-radius: 0 0 16rem 16rem;
+		}
+	}
+
+	/* タブパネル */
+	&_panel {
+		padding-block: 80rem;
+	}
+
+	&_panel_box {
+		display: none;
+	}
+}
+
+// active
+// ================================================ */
+/* menu active */
+.bl_tab_menu_item.is_active {
+	background: var(--color_primary);
+	color: #fff;
+
+	&>span {
+		color: var(--color_primary);
+		background: #fff;
+	}
+}
+
+/* menu panel */
+.bl_tab_panel_box.is_show {
+	display: block;
+}
+
+// l-main
+// ================================================ */
+.bl_tab_panel {
+	&_box>*+* {
+		margin-top: 80rem;
+	}
+
+	&_item {
+		display: grid;
+		grid-template-columns: 280rem 400rem 1fr;
+		gap: 40rem;
+		height: 100%;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			gap: 32rem;
+		}
+
+		&_year {
+			font-size: 18rem;
+			font-weight: 700;
+			height: 60rem;
+			background: #fff;
+			color: var(--color_primary);
+			border-radius: 9in;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media (max-width: 768px) {
+				font-size: 26rem;
+				height: 80rem;
+			}
+		}
+
+		&_ttl {
+			font-size: 24rem;
+			font-weight: 700;
+			color: var(--color_primary);
+			white-space: nowrap;
+
+			@media (max-width: 768px) {
+				font-size: 32rem;
+			}
+		}
+
+		&_txt {
+			margin-top: 32rem;
+
+			@media (max-width: 768px) {
+				margin-top: 16rem;
+			}
+		}
+
+		&_figure {
+			position: relative;
+			height: 240rem;
+
+			@media (max-width: 768px) {
+				width: 600rem;
+				height: auto;
+				margin-inline: auto;
+			}
+
+			&>img {
+				border-radius: 24rem;
+				overflow: hidden;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				background: var(--color-gradient-primary);
+				z-index: -1;
+				border-radius: 24rem;
+			}
+
+			&__right:before {
+				width: 360rem;
+				height: 240rem;
+				right: -40rem;
+				bottom: -40rem;
+
+				@media (max-width: 768px) {
+					width: 600rem;
+					height: 360rem;
+				}
+			}
+		}
+	}
+}
+
+.bl_tab_panel_item.bl_tab_panel_item__02 {
+	grid-template-columns: 280rem 1fr;
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 32rem;
+	}
+
+	.bl_tab_panel_item_inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.bl_tab_panel_item_txt {
+		grid-column: 2;
+		margin-top: 0;
+
+		@media (max-width: 768px) {
+			grid-column: 1;
+		}
+	}
+}
+
+.bl_tab_panel_item.bl_tab_panel_item__03 {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20rem;
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 32rem;
+	}
+
+	.bl_tab_panel_item_figure:after {
+		content: attr(data-word);
+		font-size: 18rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 180rem;
+		height: 40rem;
+		background: var(--color_primary);
+		border-radius: 0 24rem 0 24rem;
+
+		@media (max-width: 768px) {
+			font-size: 26rem;
+			width: 240rem;
+			height: 60rem;
+		}
+	}
+}
+
+
+// hp
+// ================================================ */
+.hp_panel_mt {
+	margin-top: 12rem;
+}

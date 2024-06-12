@@ -1,0 +1,85 @@
+@use './_var.scss' as *;
+
+html {
+	font-size: var(--font-size);
+}
+
+body {
+	font-family: var(--font-jp);
+	color: var(--color-black);
+	letter-spacing: 0;
+	line-height: 1;
+}
+
+* {
+	font-feature-settings: "palt";
+	letter-spacing: 0.02em;
+	// color: var(--color-black);
+}
+
+svg {
+	width: 100%;
+	height: auto;
+	fill: currentColor;
+}
+
+h2,
+h3,
+h4 {
+	line-height: 1.4;
+}
+
+// h3 {
+// 	font-size: 28rem;
+// 	font-weight: 800;
+// 	line-height: 1.4;
+
+// 	@media (max-width: 768px) {
+// 		font-size: 32rem;
+// 	}
+// }
+
+// h4 {
+// 	font-size: 18rem;
+// 	font-weight: 800;
+// 	line-height: 1.8;
+// 	letter-spacing: 0.02em;
+
+// 	@media (max-width: 768px) {
+// 		font-size: 32rem;
+// 	}
+// }
+
+// h5 {
+// 	font-size: 14rem;
+// 	font-weight: 800;
+// 	line-height: 1.4;
+// 	letter-spacing: 0.02em;
+
+// 	@media (max-width: 768px) {
+// 		font-size: 20rem;
+// 	}
+// }
+
+p {
+	font-size: 18rem;
+	line-height: 2;
+	letter-spacing: 0.12em;
+
+	@media (max-width: 768px) {
+		font-size: 24rem;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+section {
+	position: relative;
+}

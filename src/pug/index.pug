@@ -1,0 +1,261 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ./include/_layout
+
+block config
+	include ./include/_config
+	- var page = pagelist['home'];
+	- var h1_setting = true;
+	- var path = './assets/';
+	- var img_path = path + 'images';
+	- var link_path = './';
+	- var bodyClass = 'pg_home'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src=path+"js/particles.min.js")
+
+block bodyClass
+block content
+	main.l-main
+
+		#particles-js
+		//- -------------------------------------------------------------------
+		//- MV
+		//- -------------------------------------------------------------------
+		section.un_MV
+			.un_MV_inner
+				.un_MV_cont
+					.un_MV_contInner
+						.un_MV_copyUnit.js_textMV
+							.un_MV_copyUnit_figure
+								img(src=img_path+"/home/svg_MV_100th.svg", alt="")
+							.un_MV_copyUnit_ttl
+								|地域とともに100周年
+								br
+								|「感謝」と「未来」を
+								br.hp_spOnly
+								|カタチに
+							//- カウント sp
+							.un_MV_count.js_textMV.hp_spOnly
+								.un_MV_count_subTtl.hp_en
+									|100周年まで
+								.un_MV_count_ttl
+									|あと
+									span.hp_cPrimary.hp_en.js_countDown
+									|日
+						.un_MV_textUnit.hp_en.js_textMV
+							.un_MV_text
+								p
+									|Another 100 years with this city.
+									br
+									|From now on, we will continue to work together with local people.
+									br
+									|Shiba Shinkin Bank.
+								p.hp_cPrimary
+									|SHIBASHIN 100th ANNIVERSARY.
+							//- カウント pc
+							.un_MV_count.js_textMV.hp_pcOnly
+								.un_MV_count_subTtl.hp_en
+									|100周年まで
+								.un_MV_count_ttl
+									|あと
+									span.hp_cPrimary.hp_en.js_countDown
+									|日
+						//- スクロールダウン
+						.el_scrollDown.hp_en#scrollTop
+							a(href="") Scroll Down
+				.un_MV_txtArea#scrollTop_sect
+					.un_MV_txtArea_txt
+						p.js_fadein
+							|お客さまの幸せのために、
+							br
+							|地域の繁栄のために、
+							br
+							|職員のやりがいのために、
+							br
+							|どんな時でも一番身近な信用金庫でありたい。
+						p.js_fadein
+							|そんな想いを胸に、
+							br
+							|私たちは歩み続けて
+							br
+							span.hp_en 100
+							|年を迎えました。
+						p.js_fadein
+							|これからもずっと、
+							br
+							|みなさまの夢と未来を応援したい。
+						p.js_fadein
+							|“この街のホームドクター”
+							br
+							|それが私たち、芝信用金庫です。
+					.un_MV_txtArea_figure.un_MV_txtArea_figure__01.js_fadein
+						img(src=img_path+"/home/img_MV_01.webp", alt="")
+					.un_MV_txtArea_figure.un_MV_txtArea_figure__02.js_fadein
+						img(src=img_path+"/home/img_MV_02.webp", alt="")
+					.un_MV_txtArea_figure.un_MV_txtArea_figure__03.js_fadein
+						img(src=img_path+"/home/img_MV_03.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- ループスライダー
+		//- -------------------------------------------------------------------
+		.un_loopSlider
+			//- スクロール文字
+			.un_loopSlider_font.hp_en
+				span SHIBASHIN 100th ANNIVERSARY.
+				span SHIBASHIN 100th ANNIVERSARY. 
+
+			//- スクロール画像
+			.un_loopSlider_images
+				.un_loopSlider_images_inner
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_01.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_02.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_03.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_04.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_05.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_06.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_07.webp", alt="")
+				.un_loopSlider_images_inner
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_01.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_02.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_03.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_04.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_05.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_06.webp", alt="")
+					.un_loopSlider_images_figure
+						img(src=img_path+"/home/img_MV_slide_07.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- message
+		//- -------------------------------------------------------------------
+		section.un_message
+			.ly_cont
+				.un_message_txtArea.js_fadein
+					h2.el_comnHeading(data-word="MESSAGE")
+						|ごあいさつ
+					p.un_message_text
+						|100周年を迎えるしばしんから地域の皆さまへの感謝と未来への新たな想いを理事長のメッセージとしてお伝えします。
+					//- ボタン
+					a.el_btn.-more.hp_en(href=link_path+"message/")
+						span VIEW MORE
+						+icon_arrow
+				.un_message_figure.js_fadein
+					img(src=img_path+"/home/img_home_message.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- ABOUT
+		//- -------------------------------------------------------------------
+		section.un_about
+			.ly_cont
+				h2.un_about_ttl.hp_en.js_fadein
+					|ABOUT
+					br
+					|SHIBASHIN
+					span しばしんについて
+
+				.un_aboutConts
+					.bl_swiper.js_fadein
+						h3.bl_swiper_ttl
+							|しばしん
+							span.hp_en 100
+							|周年記念事業
+
+						.swiper_wrap
+							.swiper.swiper__images
+								//- 画像swiper
+								.swiper-wrapper
+									.swiper-slide
+										img(src=img_path+"/home/img_home_about_01.webp", alt="")
+									//- .swiper-slide
+									//- 	img(src=img_path+"/home/img_home_voice_01.webp", alt="")
+									//- .swiper-slide
+									//- 	img(src=img_path+"/home/img_home_voice_02.webp", alt="")
+
+							//- テキストswiper
+							.swiper.swiper__text
+								.swiper-wrapper
+									.swiper-slide 金融リテラシー（課外授業）
+									//- .swiper-slide 創立50周年記念タイムカプセルの開封2
+									//- .swiper-slide 創立50周年記念タイムカプセルの開封3
+
+							//- 前後の矢印
+							//- .swiper-button-prev.hp_reverse
+							//- 	+icon_arrow
+							//- .swiper-button-next
+							//- 	+icon_arrow
+
+						//- ボタン
+						a.el_btn.-more.hp_en(href=link_path+"about/now/#section_now")
+							span VIEW MORE
+							+icon_arrow
+					.bl_comnList.js_fadein
+						a.bl_comnListChild_item(href=link_path+"about/history/")
+							.bl_comnListChild_link(data-word="HISTORY")
+								|しばしんのこれまで
+							.bl_comnList_arrow
+								+icon_arrow
+						a.bl_comnListChild_item(href=link_path+"about/now/")
+							.bl_comnListChild_link(data-word="JUST NOW")
+								|しばしんの今
+							.bl_comnList_arrow
+								+icon_arrow
+						a.bl_comnListChild_item.hp_noHover(href=link_path+"")
+							.bl_comnListChild_link(data-word="FUTURE")
+								|しばしんのこれから
+							.bl_comnList_arrow
+								+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- VOICE
+		//- -------------------------------------------------------------------
+		section.un_voice
+			.ly_cont
+				h2.un_voice_ttl.hp_en.js_fadein
+					|VOICE!
+				.bl_gridConts
+					.bl_grid_item.js_fadein
+						.bl_grid_item_figure.bl_grid_item_figure__left.hp_filter
+							img(src=img_path+"/home/img_home_voice_01.webp", alt="")
+						h3.bl_grid_item_ttl
+							|お客様からの声
+						p.bl_grid_item_txt
+							|これまで100年の歩みを支えていただいた地域のお客さまに、しばしんとの出会いや印象に残っていること、未来のしばしんに期待することを伺いました。
+						//- ボタン
+						a.el_btn.-more.hp_en.hp_noHover(href=link_path+"")
+							span VIEW MORE
+							+icon_arrow
+					.bl_grid_item.js_fadein
+						.bl_grid_item_figure.bl_grid_item_figure__right.hp_filter
+							img(src=img_path+"/home/img_home_voice_02.webp", alt="")
+						h3.bl_grid_item_ttl
+							|職員メッセージ
+						p.bl_grid_item_txt
+							|金庫として大きな節目を迎える今、決意を新たにする職員たちにこれからも働く上でで大切にしていきたいことや、今後の目標などを聞いてみました。
+						//- ボタン
+						a.el_btn.-more.hp_en.hp_noHover(href=link_path+"")
+							span VIEW MORE
+							+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script
+	//- script(src=link_path+"js/swiper.js")

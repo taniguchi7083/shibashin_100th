@@ -1,0 +1,403 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['history'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_sec pg_history'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src=path+"js/particles.min.js")
+
+block bodyClass
+block content
+	main.l-main
+		#particles-js
+		//- -------------------------------------------------------------------
+		//- message
+		//- -------------------------------------------------------------------
+		section.un_message
+			.ly_cont
+				h1.el_comnHeading(data-word="HISTORY")
+					|しばしんのこれまで
+				.bl_tab
+					.bl_tab_menu
+						h2.bl_tab_menu_item.is_active(data-tab="01")
+							span 01
+							|芝信用金庫の歩み
+						h2.bl_tab_menu_item(data-tab="02")
+							span 02
+							|東調布信用金庫の歩み
+						h2.bl_tab_menu_item(data-tab="03")
+							span 03
+							|新生・芝信用金庫の歩み
+
+					.bl_tab_panel
+						.bl_tab_panel_box(data-panel="01").is_show
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1925年 （大正14年） 6月1日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|有限責任芝信用組合設立
+									p.bl_tab_panel_item_txt
+										|東京市域の三分の二が焦土と化した関東大震災によって打ちひしがれる市民の姿を見て、創業者・渡辺八十吉は「この街を復興させる」という想いを胸に立ち上がりました。自身も被災し、家業を失ったにもかかわらず、同志を募って東京府当局と折衝。1925年（大正14年）にしばしんの前身となる芝信用組合を創立しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_01.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1926年 （大正15年） 1月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|渡辺 八十吉 第二代組合長就任
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1927年 （昭和2年） 6月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|事務所を田村町4丁目に新築
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1934年 （昭和9年） 1月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|創立10周年 府下トップの信用組合へ
+									p.bl_tab_panel_item_txt
+										|地域における信用を高めること、組合員の資金は組合員に還元すること、組合の発展のために内部組織の整備改善を怠らないこと。そして、事業発展の素地を常に開拓していくことなど、初心を胸に焦らず、迷わず確実に歩みを続けた結果、創立10年目には貯金量が東京府下1位となりました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_02.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1939年 （昭和14年） 6月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|芝公園に本店を新築移転
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1946年（昭和21年）1月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|本店接収により本店を田村町に再移転
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1950年 （昭和25年） 4月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|初の支店として神田支店を開設
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1951年 （昭和26年） 6月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|芝信用金庫に改組
+									p.bl_tab_panel_item_txt
+										|芝信用組合は信用金庫法案の原案作成において側面的に援助する一方で、協同組合の精神を堅持しながら発展的に信用金庫へ移行することを決定。1951年（昭和26年）に芝信用金庫として組織を改変しました。全国で半数以上の信用組合が3次にわたって組織改変する中、当金庫は1次で改組することができました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_03.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1953年 （昭和28年） 11月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|本店接収解除により本店を芝公園へ移転
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1960年 （昭和35年） 12月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量100億円達成
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1966年 （昭和41年） 6月～
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|都区外へ営業区域拡大
+							.bl_tab_panel_item.bl_tab_panel_item__02
+								.bl_tab_panel_item_year
+									|1972年 （昭和47年） 11月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量1,000億円達成
+								p.bl_tab_panel_item_txt
+										|新本店の建設が進む中、全店が一丸となって預金量1,000億円への挑戦に取り組みました。1968年（昭和43年）から導入した新営業店組織の全店化や、信用金庫20周年記念全国大会において採択された「地域協調しんきん運動」などさまざまな取り組みを行い、1972年（昭和47年）に目標を達成しました。
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1972年 （昭和47年） 11月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|新本店竣工（現・本店）
+									p.bl_tab_panel_item_txt
+										|芝公園にあった本店を芝信用金庫発祥の地である芝・愛宕地区内へ移し、新本店を建設しようという願いから、1967年（昭和42年）に新本店の建設計画がスタート。明るい中にも質実さと落ち着き、親しみやすさがあり、オンライン・システムの設備や医務・教養・休憩等の施設も整えられた本店が竣工しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_05.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1975年 （昭和50年） 6月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|創立50周年
+									p.bl_tab_panel_item_txt
+										|創立50周年の2年前からPRカー導入、キャンペーンソングや標語、シンボルマークの作成、オール芝信50周年キャンペーン記念カプセルの尾山台支店への埋蔵等を行いました。職員全員が参加し、一人ひとりが主役となって創立100周年に向けての決意を固め、1975年（昭和50年）6月1日に創立50周年を迎えました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_06.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1991年 （平成3年） 3月29日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量5,000億円達成
+									p.bl_tab_panel_item_txt
+										|1990年（平成2年）から5,000億円金庫へ向けた体制づくりを目指して、営業力の強化、仕事の厳正化・スリム化、収益管理の徹底の三つを柱にした“限界への挑戦”を展開。より生産性の高い新規・深耕活動を推進します。多様化するお客さまのニーズを掘り起こし、繋げることで預金量5,000億円を達成しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_07.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1994年 （平成6年） 12月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|ふくふく定期発売開始
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1997年 （平成9年） 3月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|武蔵野信用金庫江古田支店の事業譲受
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1999年 （平成11年） 10月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|自営システムから共同事務センターへ移行
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2000年 （平成12年） 4月
+								.bl_tab_panel_item_inner
+									h3.bl_tab_panel_item_ttl
+										|｢経営理念｣｢基本方針｣
+										br
+										|｢行動指針〈五つの宣言〉｣策定
+									p.bl_tab_panel_item_txt
+										|コンプライアンス等が求められる時代となったことから、これまでの経営方針と基本的な精神は変えないことを強調しつつ、1963年（昭和38年）10月に制定した基本方針の見直しを実施。新たな経営理念と基本方針、行動指針〈五つの宣言〉を策定しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_1_08.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2001年 （平成13年） 2月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|わかば信用金庫仙川支店の事業譲受
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2003年 （平成15年） 7月7日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|東調布信用金庫と合併
+
+						.bl_tab_panel_box(data-panel="02")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1919年 （大正8年） 10月15日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|有限責任調布村信用購買組合設立
+									p.bl_tab_panel_item_txt
+										|1918年（大正7年）、東京府が貧富の格差に苦しむ庶民階級の救済を目的に、産業組合の設立を全府下の町村に呼びかけました。この「産業組合奨励5ヵ年計画」をきっかけに、東調布信用金庫の前身である有限責任調布村信用購買組合が設立されることとなりました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_2_01.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1928年 （昭和3年） 4月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|有限責任東調布信用購買組合へ改称
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1933年 （昭和8年） 8月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|本店新築
+									p.bl_tab_panel_item_txt
+										|1933年（昭和8年）には大田区田園調布に初の独立店舗を新築。旧本店の跡地は、現在も芝信用金庫の田園調布支店として利用されています。また同年末には組合員数が300人を超えて338人になり、貯金は35万2390円、貸付金は28万1511円に達しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_2_02.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1948年 （昭和23年） 7月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|営業地区を大田区、世田谷区、
+										br.hp_spOnly
+										|目黒区、品川区に拡張
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1951年 （昭和26年） 10月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|東調布信用金庫へ改組
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1959年 （昭和34年） 11月
+								.bl_tab_panel_item_inner
+									h3.bl_tab_panel_item_ttl
+										|創立40周年・本店を
+										br
+										|雪谷大塚町へ新築移転
+									p.bl_tab_panel_item_txt
+										|1959年（昭和34年）には創立40周年を迎え、本店を雪谷大塚町に新築移転します。旧本店跡地には田園調布出張所を開設し、同年12月12日には新築したばかりの本店にて記念式典を行い、本店完成と金庫40周年を職員全員で喜び合いました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_2_03.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1961年 （昭和36年）
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量100億円達成
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1965年 （昭和40年） 8月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|武蔵小杉支店を開店し、神奈川県へ進出
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1979年 （昭和54年）
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量1,000億円達成
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|1999年 （平成11年） 10月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|創立80周年
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2003年 （平成15年） 7月7日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|芝信用金庫と合併
+
+						.bl_tab_panel_box(data-panel="03")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2003年 （平成15年） 7月7日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|新生・芝信用金庫スタート
+									p.bl_tab_panel_item_txt
+										|東京都内の信用金庫において合併再編が進む中、かねてより業務提携を行っていた東調布信用金庫との合併により一層の効率化と信用力の向上を目指すべく合意に達し、2002年（平成14年）5月22日に合併基本協定書を調印。店舗数は東京都内から神奈川県内にかけて51店舗となり、新生・芝信用金庫がスタートしました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_3_01.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2004年 （平成16年） 3月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|ラッピングバスの運行開始
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2011年 （平成23年） 3月28日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|預金量1兆円達成
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2015年 （平成27年） 6月1日
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|創立90周年
+									p.bl_tab_panel_item_txt
+										|2015年（平成27年）に創立90周年を迎え、低コスト・高効率の経営体制の確立による「ベスト・ワン金庫」を目指し、新たなスタートを切りました。また、記念事業の一環として若手経営者・事業承継者などの育成と交流を目的に、「しばしんビジネスクラブ渾の会」を発足させ、研修やセミナーなどを行っています。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_3_02.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2016年 （平成28年） 9月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|「シバワン」「シバサクラ」誕生
+									p.bl_tab_panel_item_txt
+										|2018年（平成30年）1月「第37回信用金庫ＰＲコンクール」メディアミックス部門で最優秀賞を受賞しました。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_3_04.webp", alt="")
+
+							.bl_tab_panel_item.bl_tab_panel_item__02
+								.bl_tab_panel_item_year
+									|2021年 （令和3年） 5月〜
+								.bl_tab_panel_item_inner
+									h3.bl_tab_panel_item_ttl
+										|初の融資特化型事務所として
+										br
+										|赤坂オフィスを開設
+										br
+										|2021年（令和3年）
+									h3.bl_tab_panel_item_ttl
+										|融資特化型事務所
+										br
+										|恵比寿オフィスを開設
+										br
+										|2022年（令和4年）
+									h3.bl_tab_panel_item_ttl
+										|融資特化型事務所
+										br
+										|銀座オフィスを開設
+										br
+										|2023年（令和5年）
+								p.bl_tab_panel_item_txt
+									|中期経営計画で掲げた重点施策の一つとして融資特化型オフィスを開設。融資相談、資産形成、本業支援を中心に営業活動を行っています。本業支援は新規開拓からＭ＆Ａ、専門家派遣などの幅広い相談業務を行っており、地域の事業者の皆さま・お客さまのお役に立てる金融機関として活動しています。
+							.bl_tab_panel_item.bl_tab_panel_item__03
+								figure.bl_tab_panel_item_figure(data-word="赤坂オフィス")
+									img(src=img_path+"/about/history/img_history_3_03.webp", alt="")
+								figure.bl_tab_panel_item_figure(data-word="恵比寿オフィス")
+									img(src=img_path+"/about/history/img_history_3_07.webp", alt="")
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right(data-word="銀座オフィス")
+									img(src=img_path+"/about/history/img_history_3_05.webp", alt="")
+							.bl_tab_panel_item
+								.bl_tab_panel_item_year
+									|2024年 （令和6年） 6月
+								.bl_tab_panel_item_inner.hp_panel_mt
+									h3.bl_tab_panel_item_ttl
+										|創立99周年
+									p.bl_tab_panel_item_txt
+										|2024年（令和6年）、創立100周年を目前に控え、さまざまな周年事業をスタートさせます。本周年サイトもまたそのひとつ。その他にも、創立50周年の際に埋めたタイムカプセルの開封や金融リテラシー向上を目的とする小学生向け課外授業の実施、地域の企業様とのコラボレーションなどを行います。
+								figure.bl_tab_panel_item_figure.bl_tab_panel_item_figure__right
+									img(src=img_path+"/about/history/img_history_3_06.webp", alt="")
+
+					.bl_tab_menu.bl_tab_menu__reverse
+						h2.bl_tab_menu_item.is_active(data-tab="01")
+							span 01
+							|芝信用金庫の歩み
+						h2.bl_tab_menu_item(data-tab="02")
+							span 02
+							|東調布信用金庫の歩み
+						h2.bl_tab_menu_item(data-tab="03")
+							span 03
+							|新生・芝信用金庫の歩み
+
+				//- ページネーション
+				.bl_nextPage
+					a.bl_comnListChild_item(href=link_path+"message/")
+						.bl_comnList_arrow
+							+icon_arrow__reverse
+						.bl_comnListChild_link(data-word="MESSAGE")
+							|トップメッセージ
+					a.bl_comnListChild_item(href=link_path+"about/now/")
+						.bl_comnListChild_link(data-word="JUST NOW")
+							|しばしんの今
+						.bl_comnList_arrow
+							+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script

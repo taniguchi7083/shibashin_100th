@@ -1,0 +1,87 @@
+//- -------------------------------------------------------------------
+//- header
+//- -------------------------------------------------------------------
+header.ly_header
+	.ly_header_inner
+		//- PC用ロゴ表示
+
+		if h1_setting
+			h1.bl_headerConts.u-pcOnly
+				a.bl_headerConts_logo#js_logo(href=link_path+"")
+					+icon_logo
+					p.bl_headerConts_txt
+						|芝信用金庫 
+						span.hp_en 100
+						|周年記念サイト
+		else
+			.bl_headerConts.u-pcOnly
+				a.bl_headerConts_logo#js_logo(href=link_path+"")
+					+icon_logo
+					p.bl_headerConts_txt
+						|芝信用金庫 
+						span.hp_en 100
+						|周年記念サイト
+
+		//- ハンバーガーボタン
+		.bl_ham
+			button.bl_ham_inner#js_ham
+				span
+				span
+
+//- ナビゲーション sp
+nav
+	.bl_hamNav#js_nav
+		.bl_hamNav_inner
+			.bl_comnList
+				a.bl_comnList_item(href=link_path+"message/")
+					.bl_comnList_link(data-word="MESSAGE")
+						|ごあいさつ
+					.bl_comnList_arrow
+						+icon_arrow
+
+				.bl_comnList_item.hp_margin
+					.bl_comnList_link(data-word="ABOUT SHIBASHIN")
+						|しばしんについて
+
+				a.bl_comnListChild_item(href=link_path+"about/history/")
+					.bl_comnListChild_link(data-word="HISTORY")
+						|しばしんのこれまで
+					.bl_comnList_arrow
+						+icon_arrow
+				a.bl_comnListChild_item(href=link_path+"about/now/")
+					.bl_comnListChild_link(data-word="JUST NOW")
+						|しばしんの今
+					.bl_comnList_arrow
+						+icon_arrow
+				a.bl_comnListChild_item.hp_noHover(href=link_path+"")
+					.bl_comnListChild_link(data-word="FUTURE")
+						|しばしんのこれから
+					.bl_comnList_arrow
+						+icon_arrow
+			.bl_comnList
+				.bl_comnList_item.hp_noHover
+					.bl_comnList_link(data-word="VOICE!")
+				a.bl_comnListChild_item.hp_noHover(href=link_path+"")
+					.bl_comnListChild_link(data-word="VOICE! 01")
+						|お客さまからの声
+					.bl_comnList_arrow
+						+icon_arrow
+				a.bl_comnListChild_item.hp_noHover(href=link_path+"")
+					.bl_comnListChild_link(data-word="VOICE! 02")
+						|職員メッセージ
+					.bl_comnList_arrow
+						+icon_arrow
+				a.bl_comnList_item.hp_margin.hp_noHover(href=link_path+"")
+					.bl_comnList_link(data-word="DOWNLOAD")
+						|芝信用金庫の
+						br
+						|マスコットキャラクターの
+						br
+						|壁紙をダウンロード！！
+					.bl_comnList_arrow
+						+icon_arrow
+
+//- ローディング画面
+#bl_loading.hp_en
+	p LOADING...
+	#bl_loading_screen

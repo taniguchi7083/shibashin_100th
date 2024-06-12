@@ -1,0 +1,18 @@
+// Heading
+// ================================================ */
+.el_comnHeading {
+	font-size: 64rem;
+	font-weight: 600;
+	margin-bottom: 80rem;
+
+	&:before {
+		display: block;
+		content: attr(data-word);
+		font-size: 24rem;
+		line-height: 1.6;
+		font-weight: 700;
+		font-family: var(--font-en);
+		color: var(--color_primary);
+		margin-left: 8rem;
+	}
+}

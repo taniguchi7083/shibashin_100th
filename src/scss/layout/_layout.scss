@@ -1,0 +1,68 @@
+// レイアウト
+// ================================================ */
+.ly_cont {
+	width: 1120rem;
+	margin-inline: auto;
+
+	@media (max-width: 768px) {
+		width: auto;
+		margin-inline: 32rem;
+	}
+}
+
+
+// ページ固有
+// ================================================ */
+body {
+	background-image: var(--color-gradient);
+
+	&.is_active {
+		overflow: hidden;
+		height: 100vh;
+	}
+}
+
+// パーティクル
+// ================================================ */
+#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	inset: 0;
+	z-index: -1;
+}
+
+// アニメーションパーツ
+// ================================================ */
+.js_fadein {
+	opacity: 0;
+}
+
+// LOADING
+// ================================================ */
+#bl_loading {
+	position: fixed;
+	inset: 0;
+	z-index: var(--z-index-loading);
+	display: grid;
+	place-items: center;
+	background: #fff;
+
+	&_screen {
+		background-color: #00e0654a;
+		position: fixed;
+		inset: 0;
+		z-index: 9998;
+		translate: 0 100vh;
+	}
+
+	&>p {
+		font-size: 40rem;
+		font-weight: 700;
+		color: var(--color_primary);
+
+		@media (max-width: 768px) {
+			font-size: 56rem;
+		}
+	}
+}

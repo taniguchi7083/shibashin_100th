@@ -1,0 +1,57 @@
+// un_message
+// ================================================ */
+.ly_footer {
+	padding-block: 80rem;
+
+	.ly_cont {
+		display: flex;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 32rem;
+			text-align: right;
+
+			@media (max-width: 768px) {
+				gap: 80rem;
+			}
+		}
+	}
+}
+
+.bl_footerNav {
+	display: flex;
+	align-items: center;
+	gap: 40rem;
+
+	&_link {
+		font-size: 14rem;
+		display: flex;
+		gap: 4rem;
+
+		@media (max-width: 768px) {
+			font-size: 20rem;
+			gap: 8rem;
+		}
+	}
+
+	.el_external {
+		width: 10rem;
+		height: 10rem;
+
+		@media (max-width: 768px) {
+			width: 20rem;
+			height: 20rem;
+		}
+	}
+}
+
+.bl_footerCopyright {
+	font-size: 12rem;
+	font-weight: 700;
+	margin-left: auto;
+
+	@media (max-width: 768px) {
+		font-size: 20rem;
+		margin-right: auto;
+	}
+}
